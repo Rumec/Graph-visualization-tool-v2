@@ -1,6 +1,7 @@
 .graph-section {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
 
     margin: 0;
     padding: 0;
@@ -8,4 +9,12 @@
 
 .graph-section__graph {
     width: 45%;
+}
+
+.graph-section__main-procedure {
+    width: 23%;
+}
+
+.graph-section__sub-procedure {
+    width: 22%;
 }
