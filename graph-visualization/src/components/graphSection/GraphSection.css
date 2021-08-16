@@ -1,0 +1,11 @@
+.graph-section {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+}
+
+.graph-section__graph {
+    width: 45%;
+}
