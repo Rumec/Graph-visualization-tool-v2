@@ -376,13 +376,13 @@ class NetworkGraph extends React.Component {
      * @returns {Promise<void>}
      */
     async changeEdge(from, to, color, newKOut = 0) {
-        let oldEdges = await this.state.edges.slice();
+        let oldEdges = this.state.edges.slice();
         const index = oldEdges.findIndex(item =>
             item.from === from && item.to === to
         );
         const edgeKOut = oldEdges[index].k_out;
-        await oldEdges.splice(index, 1);
-        await oldEdges.push({
+        oldEdges.splice(index, 1);
+        oldEdges.push({
                 from: from,
                 to: to,
                 k_out: (newKOut === 0) ? edgeKOut : newKOut,

@@ -10,10 +10,8 @@ const classes = new BEMHelper({
 });
 
 export const GraphSection = (props) => {
-    const graph = {nodes: [
-            {id: 1, label: '1'},
-            {id: 2, label: '2'},
-        ], edges: []};
+    const graph = {nodes: props.nodes, edges: props.edges}
+
     const options = {
         layout: {
             hierarchical: false
@@ -28,13 +26,13 @@ export const GraphSection = (props) => {
     };
 
     // TODO: Create pseudocode components (probably using 1 with switch statement and using props to show correct code)
-    return(
+    return (
         <div {...classes()}>
             <div {...classes('graph')}>
-                <Graph graph={graph} options={options} />
+                <Graph graph={graph} options={options}/>
             </div>
-            <SparseGraphSubprocedure {...classes('main-procedure')} procedure={2} step={0} />
-            <SparseGraphSubprocedure {...classes('sub-procedure')} procedure={3} step={0} />
+            <SparseGraphSubprocedure {...classes('main-procedure')} procedure={2} step={0}/>
+            <SparseGraphSubprocedure {...classes('sub-procedure')} procedure={3} step={0}/>
         </div>
     )
 }

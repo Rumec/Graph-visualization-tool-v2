@@ -1,5 +1,5 @@
 import './App.css';
-import {MainView} from "./components/mainView/MainView";
+import MainView from "./components/mainView/MainView";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

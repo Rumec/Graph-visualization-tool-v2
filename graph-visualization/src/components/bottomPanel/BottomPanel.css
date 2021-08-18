@@ -1,0 +1,12 @@
+.bottom-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 1rem;
+}
+
+.bottom-panel__graph_builder {
+    display: flex;
+    flex-direction: column;
+}
