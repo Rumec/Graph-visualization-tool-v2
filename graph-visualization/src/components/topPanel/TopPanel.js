@@ -17,8 +17,7 @@ export const TopPanel = (props) => {
                     <InputGroup className="mb-3">
                         <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm"
                                      placeholder={'Vertex count'} name={'vertexCountInput'}
-                                     onChange={props.self.handleInputChange}
-                        />
+                                     type={'number'} onChange={props.self.handleInputChange}/>
                         <Button variant="primary" id="button-addon1" onClick={async () => {
                             await generateGraph(props.self);
                         }}>
@@ -26,15 +25,18 @@ export const TopPanel = (props) => {
                         </Button>
                     </InputGroup>
                 </div>
-
                 <div>
-                </div>
-
-                <div>
-                    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <DropdownButton id="dropdown-basic-button" title="Choose an algorithm">
+                        <Dropdown.Header>Graph traversal</Dropdown.Header>
+                        <Dropdown.Item
+                            onClick={() => props.self.setState({algorithm: 'DFS', algorithmType: 'traversal'})}>DFS</Dropdown.Item>
+                        <Dropdown.Item onClick={() => props.self.setState({algorithm: '', algorithmType: ''})}>-</Dropdown.Item>
+                        <Dropdown.Item onClick={() => props.self.setState({algorithm: ''})}>-</Dropdown.Item>
+                        <Dropdown.Divider/>
+                        <Dropdown.Header>Shortest path</Dropdown.Header>
+                        <Dropdown.Item onClick={() => props.self.setState({algorithm: ''})}>-</Dropdown.Item>
+                        <Dropdown.Item onClick={() => props.self.setState({algorithm: ''})}>-</Dropdown.Item>
+                        <Dropdown.Item onClick={() => props.self.setState({algorithm: ''})}>-</Dropdown.Item>
                     </DropdownButton>
                 </div>
             </div>

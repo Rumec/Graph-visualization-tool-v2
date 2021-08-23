@@ -22,7 +22,9 @@ class MainView extends React.Component {
             edges: [],
             from: 0,
             to: 0,
-            startingVertex: 0
+            startingVertex: 0,
+            algorithm: '',
+            algorithmType: ''
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
