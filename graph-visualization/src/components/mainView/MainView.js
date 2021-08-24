@@ -24,7 +24,10 @@ class MainView extends React.Component {
             to: 0,
             startingVertex: 0,
             algorithm: '',
-            algorithmType: ''
+            algorithmType: '',
+            mainProcedureStep: 0,
+            subProcedureStep: 0,
+            stepDuration: 800
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }

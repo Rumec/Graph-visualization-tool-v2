@@ -16,3 +16,11 @@ export async function changeEdge(from, to, color, self) {
     });
 }
 
+export async function colorPseudocodeLine(step, self, mainProcedure = true) {
+    if (mainProcedure) {
+        await self.setState({mainProcedureStep: step});
+        return;
+    }
+    await self.setState({subProcedureStep: step});
+}
+
