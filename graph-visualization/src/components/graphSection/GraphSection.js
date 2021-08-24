@@ -4,6 +4,7 @@ import React from "react";
 import BEMHelper from 'react-bem-helper';
 import Graph from "react-graph-vis";
 import SparseGraphSubprocedure from "../../componentsOld/SparseGraphSubprocedure";
+import {DFSMainProcedure} from "./pseudocodes/DFSMainProcedure";
 
 const classes = new BEMHelper({
     name: 'graph-section',
@@ -12,6 +13,7 @@ const classes = new BEMHelper({
 export const GraphSection = (props) => {
     const graph = {nodes: props.nodes, edges: props.edges}
 
+    // TODO: Some options will be dynamic (like curved edges)
     const options = {
         layout: {
             hierarchical: false
@@ -31,8 +33,8 @@ export const GraphSection = (props) => {
             <div {...classes('graph')}>
                 <Graph graph={graph} options={options}/>
             </div>
-            <SparseGraphSubprocedure {...classes('main-procedure')} procedure={2} step={0}/>
-            <SparseGraphSubprocedure {...classes('sub-procedure')} procedure={3} step={0}/>
+            <DFSMainProcedure self={props.self}/>
+            <SparseGraphSubprocedure procedure={3} step={0}/>
         </div>
     )
 }

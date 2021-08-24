@@ -62,7 +62,7 @@ const RenderAlgorithmControl = (props) => {
                     <InputGroup className="mb-3">
                         <InputGroup.Text>Starting vertex</InputGroup.Text>
                         <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder={'Vertex'}
-                                     name={'startingVertex'} onChange={props.self.handleInputChange}/>
+                                     name={'startingVertex'} onChange={props.self.handleInputChange} type={'number'}/>
                     </InputGroup>
                     <Button variant="primary" onClick={() => DFSTraversal(props.self.state.edges, props.self)}>
                         Start algorithm
@@ -75,12 +75,12 @@ const RenderAlgorithmControl = (props) => {
                     <InputGroup className="mb-3">
                         <InputGroup.Text>Starting vertex</InputGroup.Text>
                         <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder={'Vertex'}
-                                     name={'startingVertex'} onChange={props.self.handleInputChange}/>
+                                     name={'startingVertex'} type={'number'} onChange={props.self.handleInputChange}/>
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <InputGroup.Text>Starting vertex</InputGroup.Text>
                         <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder={'Vertex'}
-                                     name={'endingVertex'} onChange={props.self.handleInputChange}/>
+                                     name={'endingVertex'} type={'number'} onChange={props.self.handleInputChange}/>
                     </InputGroup>
                     <Button variant="primary" onClick={() => algorithmRun(props.self)}>
                         Start algorithm

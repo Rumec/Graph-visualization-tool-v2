@@ -8,13 +8,6 @@
 }
 
 .graph-section__graph {
-    width: 45%;
-}
-
-.graph-section__main-procedure {
-    width: 23%;
-}
-
-.graph-section__sub-procedure {
-    width: 22%;
+    width: 50%;
+    height: 65vh;
 }

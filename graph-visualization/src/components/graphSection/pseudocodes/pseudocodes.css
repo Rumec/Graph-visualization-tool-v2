@@ -1,0 +1,27 @@
+.pseudocode {
+    width: 22%;
+}
+
+.pseudocode__keyword {
+    font-weight: bold;
+}
+
+.pseudocode__parameter {
+    font-style: italic;
+}
+
+.pseudocode__indent-1 {
+    text-indent: 1rem;
+}
+
+.pseudocode__indent-2 {
+    text-indent: 2rem;
+}
+
+.pseudocode__indent-3 {
+    text-indent: 3rem;
+}
+
+.pseudocode__indent-4 {
+    text-indent: 4rem;
+}

@@ -17,7 +17,8 @@ export const TopPanel = (props) => {
                     <InputGroup className="mb-3">
                         <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm"
                                      placeholder={'Vertex count'} name={'vertexCountInput'}
-                                     type={'number'} onChange={props.self.handleInputChange}/>
+                                     type={'number'} onChange={props.self.handleInputChange}
+                                     value={props.self.state.vertexCountInput} />
                         <Button variant="primary" id="button-addon1" onClick={async () => {
                             await generateGraph(props.self);
                         }}>

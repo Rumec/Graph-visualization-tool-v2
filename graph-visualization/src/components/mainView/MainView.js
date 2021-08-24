@@ -33,7 +33,7 @@ class MainView extends React.Component {
         //console.log(this.state.startingVertex);
         const {name, value} = event.target;
         this.setState({
-            [name]: parseInt(value)
+            [name]: parseInt(value) > 0 ? parseInt(value) : 0
         })
     }
 
